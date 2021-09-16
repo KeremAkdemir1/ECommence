@@ -1,0 +1,23 @@
+﻿@model E_Commence.Models.Data.Food
+@{
+    ViewData["Title"] = "AddFood";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+@Html.BeginForm("AddFood", "Admin", FormMethod.Post)
+
+@Html.Label("Food Name")
+@Html.TextBoxFor(x => x.FoodName, new { @class = "form-control" })
+<br />
+@Html.Label("Food Price")
+@Html.TextBoxFor(x => x.FoodPrice, new { @class = "form-control" })
+<br />
+@Html.Label("Food Category")
+@Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v1,new { @class="form-control" })
+<br />
+@Html.Label("Food Photo")
+@Html.TextBoxFor(x => x.FoodPhotoLink, new { @class = "form-control" })
+<br />
+<button type="submit" class="btn btn-info">Add</button>
+

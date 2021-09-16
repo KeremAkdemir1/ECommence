@@ -1,0 +1,31 @@
+﻿@model List<E_Commence.Models.Data.Beverage>
+@{
+    ViewData["Title"] = "BeverageIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <td>BeverageId</td>
+        <td>Beverage Price</td>
+        <td>Beverage Price</td>
+        <td>Alchol?</td>
+        <td>Delete</td>
+        <td>Update</td>
+        <td>Beverage Photo</td>
+    </tr>
+    @foreach (var x in Model)
+    {
+
+    
+<tr>
+    <td>@x.BeverageId</td>
+    <td>@x.BeverageName</td>
+    <td>@x.BeveragePrice</td>
+    <td>@x.Alcohol</td>
+    <td><a href="/Admin/DeleteBeverage/@x.BeverageId" class="btn btn-danger">Delete</a>
+    <td><a href="/Admin/BeverageGet/@x.BeverageId" class="btn btn-success">Update</a>
+    <td>@x.BeveragePhotoLink</td>
+</tr>
+    }
+</table>

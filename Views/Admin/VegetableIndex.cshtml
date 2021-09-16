@@ -1,0 +1,30 @@
+﻿@model List<E_Commence.Models.Data.Vegetable>
+@{
+    ViewData["Title"] = "VegetableIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+
+    <tr>
+        <td>Vegetable Id</td>
+        <td>Vegetable Name</td>
+        <td>Vegetable Price</td>
+        <td>Vegetable Delete</td>
+        <td>Vegetable Update</td>
+        <td>Vegetable Photo</td>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.VegetableId</td>
+    <td>@x.VegetableName</td>
+    <td>@x.VegetablePrice</td>
+    <td><a href="/Admin/DeleteVegetable/@x.VegetableId" class="btn btn-danger">Delete</a>
+    <td><a href="/Admin/VegetableGet/@x.VegetableId" class="btn btn-success">Update</a>
+    <td>@x.VegetablePhotoLink</td>
+</tr>
+    }
+</table>

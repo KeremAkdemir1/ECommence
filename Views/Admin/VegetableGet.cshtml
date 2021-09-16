@@ -1,0 +1,21 @@
+﻿@model E_Commence.Models.Data.Vegetable
+@{
+    ViewData["Title"] = "VegetableGet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+@Html.BeginForm("UpdateVegetable", "Admin", FormMethod.Post)
+@Html.Label("Vegetable Id")
+@Html.TextBoxFor(x => x.VegetableId, new { @class = "form-control" })
+<br />
+@Html.Label("Vegetable Name")
+@Html.TextBoxFor(x => x.VegetableName, new { @class = "form-control" })
+<br />
+@Html.Label("Vegetable Price")
+@Html.TextBoxFor(x => x.VegetablePrice, new { @class = "form-control" })
+<br />
+@Html.Label("Vegetable Photo Link")
+@Html.TextBoxFor(x => x.VegetablePhotoLink, new { @class = "form-control" })
+<br />
+<button type="submit" class="btn btn-success">Update</button>

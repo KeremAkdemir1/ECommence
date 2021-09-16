@@ -1,0 +1,23 @@
+﻿@model List<E_Commence.Models.Data.User>
+@{
+    ViewData["Title"] = "UsersIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+
+    <tr>
+        <td>User Id</td>
+        <td>Username</td>
+        <td>Password</td>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.UserId</td>
+            <td>@x.Username</td>
+            <td>@x.Password</td>
+        </tr>
+    }
+</table>

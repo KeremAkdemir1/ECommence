@@ -1,0 +1,20 @@
+﻿@model E_Commence.Models.Data.Vegetable
+@{
+    ViewData["Title"] = "AddVegetable";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+@Html.BeginForm("AddVegetable", "Admin", FormMethod.Post)
+
+@Html.Label("Vegetable Name")
+@Html.TextBoxFor(x => x.VegetableName, new { @class = "form-control" })
+<br />
+@Html.Label("Vegetable Price")
+@Html.TextBoxFor(x => x.VegetablePrice, new { @class = "form-control" })
+<br />
+@Html.Label("Vegetable Photo")
+@Html.TextBoxFor(x => x.VegetablePhotoLink, new { @class = "form-control" })
+<br />
+<button type="submit" class="btn btn-info">Add</button>
+

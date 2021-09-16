@@ -1,0 +1,35 @@
+﻿@model List<E_Commence.Models.Data.Food>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100;1,200&display=swap" rel="stylesheet">
+<link href="~/css/food.css" rel="stylesheet" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FastFoods</title>
+</head>
+<body>
+    @foreach (var x in Model)
+    {
+        <div class="container">
+
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="@x.FoodPhotoLink" />
+                </div>
+                <div class="contentBx">
+                    <h2>@x.FoodName</h2>
+                    <a href="#">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    }
+</body>
+</html>

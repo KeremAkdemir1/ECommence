@@ -1,0 +1,22 @@
+﻿@model E_Commence.Models.Data.Beverage
+@{
+    ViewData["Title"] = "AddBeverage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+@Html.BeginForm("AddBeverage", "Admin", FormMethod.Post)
+
+@Html.Label("Beverage Name")
+@Html.TextBoxFor(x => x.BeverageName, new { @class = "form-control" })
+<br />
+@Html.Label("Beverage Price");
+@Html.TextBoxFor(x => x.BeveragePrice, new { @class = "form-control" })
+<br />
+@Html.Label("Beverage Photo");
+@Html.TextBoxFor(x => x.BeveragePhotoLink, new { @class = "form-control" })
+<br />
+@Html.Label("Alchol(True or False)");
+@Html.TextBoxFor(x => x.Alcohol, new { @class = "form-control" })
+<br />
+<button type="submit" class="btn btn-info">Add</button>
+

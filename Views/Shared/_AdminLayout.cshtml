@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        *{
+            padding:0;
+            
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                    color: #0f0;
+                }
+
+
+                
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a class="active" href="/Admin/FoodIndex">Foods</a></li>
+        <li><a href="/Admin/BeverageIndex">Beverages</a></li>
+        <li><a href="/Admin/VegetableIndex">Vegetables</a></li>
+        <li><a href="/Admin/AddFood">AddFood</a></li>
+        <li><a href="/Admin/AddBeverage">AddBeverage</a></li>
+        <li><a href="/Admin/AddVegetable">AddVegetable</a></li>
+        <li><a href="/Admin/UsersIndex">Users</a></li>
+        <li><a href="/Admin/BlogIndex">Blogs</a></li>
+
+    </ul>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

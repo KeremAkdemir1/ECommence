@@ -1,0 +1,24 @@
+﻿@model List<E_Commence.Models.Data.Blog> 
+@{
+    ViewData["Title"] = "BlogIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+
+    <tr>
+        <td>Blog Id</td>
+        <td>Writer</td>
+        <td>Writing</td>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.BlogId</td>
+            <td>@x.Writer</td>
+            <td>@x.Writing</td>
+        </tr>
+    }
+</table>
